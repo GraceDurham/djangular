@@ -1,0 +1,36 @@
+<html>
+	<body ng-app="scrumboard.demo">
+		{% verbatim %}
+		<div ng-controller="ScrumboardController">
+			{{ person.name }} is {{ person.age}} years old.
+
+		</div>
+		{% endverbatim %}
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+		<script>
+			(function(){
+				'use strict';
+				angular.module('scrumboard.demo', [])
+					.controller('ScrumboardController', [ '$scope', ScrumboardController]);
+
+				function ScrumboardController($scope){
+					$scope.data = [
+						{
+						name: 'Django demo',
+						cards: [
+							{
+								title: 'Create Models'
+							},
+							{
+								title: 'Create View'
+							},
+							{
+								title: 'Migrate Database'
+							}, 
+					};
+				}
+			}());
+		</script>
+	</body>
+</html>
