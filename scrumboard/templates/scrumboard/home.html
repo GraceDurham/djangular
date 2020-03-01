@@ -2,8 +2,12 @@
 	<body ng-app="scrumboard.demo">
 		{% verbatim %}
 		<div ng-controller="ScrumboardController">
-			{{ person.name }} is {{ person.age}} years old.
-
+			<div ng-repeat="list in data">
+				<h3>{{ list.name }}</h3>
+				<ul>
+					<li ng-repeat="card in list.cards">{{ card.title }}</li>
+				</ul>
+			</div>
 		</div>
 		{% endverbatim %}
 
@@ -28,9 +32,28 @@
 							{
 								title: 'Migrate Database'
 							}, 
-					};
-				}
-			}());
+						]
+					},
+					{
+
+						name: 'Angular demo',
+						cards: [
+							{
+								title: 'Write HTML'
+							},
+							{
+
+								title: 'Write Javascript'
+							},
+						]
+
+					}
+
+				];
+
+			}
+
+		}());
 		</script>
 	</body>
 </html>
