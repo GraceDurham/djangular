@@ -15,7 +15,8 @@
 		$scope.data = []; 
 		$http.get('/scrumboard/lists').then(function(response){
 			$scope.data = response.data;
-		}); #gets data from the database list api passing url where data living restframe work
+			# add $http.get data from url restframe work add then functions pass response from http call add scope.data to display JSON data
+		}); 
 					
 	}								
 					
