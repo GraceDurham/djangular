@@ -18,6 +18,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('home/', include('scrumboard/home.html')),
     path('scrumboard/', include('scrumboard.urls')),
 ]
  
