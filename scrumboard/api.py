@@ -11,7 +11,5 @@ class ListViewSet(ModelViewSet): # ModelViewSet implements and supports put post
 
 
 class CardViewSet(ModelViewSet):
-	queryset = List.objects.all()
-	serializer_class = ListSerializer
-
-
+	queryset = Card.objects.all()
+	serializer_class = CardSerializer
