@@ -2,3 +2,14 @@
 	<h4>{{ card.title }}</h4>
 	<span class="description">{{ card.description }}</span>
 </div>
+
+<div class="card" ng-show="edit">
+	<div class="flex">
+		<label><strong>Title:&nbsp;</strong>strong></label>
+		<input type="text" ng-model="card.title" />
+	</div>
+	<textarea ng-model="card.description"
+		placeholder="Enter description.."></textarea>
+
+	<button ng-click="edit=false">Close</button>
+</div>
