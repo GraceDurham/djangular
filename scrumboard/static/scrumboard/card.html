@@ -3,7 +3,8 @@
 	<span class="description">{{ card.description }}</span>
 </div>
 
-<div class="card" ng-show="edit">
+<div class="card" ng-show="edit"
+	ng-model-options="modelOptions">
 	<div class="flex">
 		<label><strong>Title:&nbsp;</strong>strong></label>
 		<input type="text" 
