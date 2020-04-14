@@ -18,6 +18,10 @@
 						
 					);
 				};
+
+				$scope.modelOptions = {
+					debounce:500
+				};
 			}]
 
 		};
