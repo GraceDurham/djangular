@@ -19,6 +19,20 @@
 					);
 				};
 
+				$scope.delete = function(){
+					$http.delete(url).then(
+						function(){
+							var cards = $scope.list.cards;
+							cards.splice(
+								cards.indexOf($scope.card),
+								1
+							);
+						}
+
+					);
+
+				};
+
 				$scope.modelOptions = {
 					debounce:500 //Add model options Debounce when event causes model 
 								 //to be updated waits for 500 milliseconds to update change
