@@ -10,7 +10,7 @@ from .serializers import UserSerializer
 
 class LoginView(views.APIView):
 
-	@method_decorator(csrf_protect)
+	@method_decorator(csrf_protect) # protects from non login in users csrf attacks
 	def post(self, request):
 		user = authenticate(
 			username=request.data.get("username"),
