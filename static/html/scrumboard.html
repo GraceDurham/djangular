@@ -1,15 +1,13 @@
-	<div ng-controller="ScrumboardController">
 
-			<div class="list" ng-repeat="list in data">
-				<h3>{{ list.name }}</h3>
-				<ul>
-					<li ng-repeat="card in list.cards">
-						<scrumboard-card></scrumboard-card>
-					</li>
-				</ul>
-				<div class="flex">
-					<input type="text" ng-model="new_title" />
-					<button ng-click ="add(list, new_title)">+</button>
-			   </div>
-			</div>
-		</div>
+<div class="list" ng-repeat="list in data">
+	<h3>{{ list.name }}</h3>
+	<ul>
+		<li ng-repeat="card in list.cards">
+			<scrumboard-card></scrumboard-card>
+		</li>
+	</ul>
+	<div class="flex">
+		<input type="text" ng-model="new_title" />
+		<button ng-click ="add(list, new_title)">+</button>
+   </div>
+</div>
