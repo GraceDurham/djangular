@@ -25,11 +25,6 @@
 
 		};
 
-		$scope.login = function(){
-			$http.post('/auth_api/login/',
-				{username: 'gracedurham', password: '3282python'});
-
-		};
 
 		$scope.data = []; 
 		$http.get('/scrumboard/lists/').then(
