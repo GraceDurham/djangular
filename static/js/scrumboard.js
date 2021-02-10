@@ -25,6 +25,13 @@
 
 		};
 
+		$scope.logout = function(){
+			$http.get('/auth_api/logout/') // send get request to logout service when returns 
+				.then(function () {
+					$location.url('/login'); // redirect user to login page
+				});
+		}
+
 
 		$scope.data = []; 
 		$http.get('/scrumboard/lists/').then(
