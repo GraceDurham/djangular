@@ -3,8 +3,9 @@
 </div>
 <div class="list" ng-repeat="list in data">
 	<h3>{{ list.name }}</h3>
+	<input type="text" ng-model="filterBy">
 	<ul>
-		<li ng-repeat="card in list.cards">
+		<li ng-repeat="card in list.cards | filter:filterBy">
 			<scrumboard-card></scrumboard-card>
 		</li>
 	</ul>
