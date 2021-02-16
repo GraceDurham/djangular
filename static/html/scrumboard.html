@@ -3,7 +3,16 @@
 </div>
 <div class="list" ng-repeat="list in data">
 	<h3>{{ list.name }}</h3>
-		<div class ="list-sort">
+
+	<span class="show-filters">
+		<button ng-click="show-filters=!showFilters">
+			{{ showFilters  ? "Hide"  :  "Show" }}  filters
+		</button>
+	</span>
+
+	
+		<div class ="list-sort"
+			ng-show="showFilters">
 		<hr>
 		<table>
 			<tr>
