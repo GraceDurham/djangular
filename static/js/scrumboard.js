@@ -39,7 +39,10 @@
 				$scope.data = response.data;
 			//add $http.get data from url restframe work add then functions pass response from http call add scope.data to display JSON data
 			}
-		); 
+		);
+		$scope.sortBy='story_points';
+		$scope.reverse=true;
+		$scope.showFilters=false; 
 					
 	}								
 					
