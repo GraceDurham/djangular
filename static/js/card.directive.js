@@ -11,8 +11,10 @@
 			restrict:'E',
 			controller: ['$scope', '$http', function ($scope, $http){
 				var url = '/scrumboard/cards/' + $scope.card.id + '/';
+
+
 				$scope.update = function () {
-					$http.put(
+					return $http.put(
 						url,
 						$scope.card
 						
@@ -39,7 +41,7 @@
 				};
 
 				$scope.move = function () {
-					if ($scope.destlist === undefined){
+					if ($scope.destList === undefined)  {
 						return;
 					}
 					$scope.card.list = $scope.destList.id;
