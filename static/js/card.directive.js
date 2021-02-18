@@ -37,6 +37,19 @@
 					debounce:500 //Add model options Debounce when event causes model 
 								 //to be updated waits for 500 milliseconds to update change
 				};
+
+				$scope.move = function () {
+					if ($scope.destlist === undefined){
+						return;
+					}
+					$scope.card.list = $scope.destList.id;
+					$scope.update().then(function (){
+						{
+							removeCardFromList($scope.card, $scope.list);
+							$scope.destList.cards.push($scope.card);
+						}
+					});
+				}
 			}]
 
 		};
