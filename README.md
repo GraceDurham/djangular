@@ -12,7 +12,16 @@ $ git clone https://github.com/GraceDurham/djangular.git
 
 ```
 
-#### 2. Setting up a Virtual Environment and running it on Command Line  
+
+#### 2. Installing Python 3 with Home Brew on a Mac
+
+```
+Install Home Brew with 
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew install python3
+```
+
+#### 3. Setting up a Virtual Environment and running it on Command Line  
 ```
 $ pip install virtualenv
 $ python3 -m venv djangular
@@ -22,19 +31,19 @@ $ . bin/activate
 ```
 
 
-#### 3. Installing Django 
+#### 4. Installing Django 
 ```
 $ pip install django
 
 ```
 
-#### 4. Installing Djangorestframework
+#### 5. Installing Djangorestframework
 ```
 $ pip install djangorestframework
 
 ```
 
-#### 5.  Change directory and Run the server
+#### 6.  Change directory and Run the server
 ```
 $ cd ../
 $ python manage.py runserver
